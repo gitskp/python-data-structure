@@ -1,16 +1,22 @@
-# Function to print binary number for the
-# input decimal using recursion
-def decimalToBinary(n):
-
-    if n > 1:
-         #  divide with integral result
-         # (discard remainder)
-        decimalToBinary(n//2)
-
-    # use print(n%2, end ='') for python 3
-    print n%2,
-
-# Driver code
-if __name__ == '__main__':
-    decimalToBinary(8)
-    print
+def decToBinary(n): 
+      
+    # array to store 
+    # binary number 
+    binaryNum = [0] * n; 
+  
+    # counter for binary array 
+    i = 0; 
+    while (n > 0):  
+  
+        # storing remainder 
+        # in binary array 
+        binaryNum[i] = n % 2; 
+        n = int(n / 2); 
+        i += 1; 
+  
+    # printing binary array 
+    # in reverse order 
+    for j in range(i - 1, -1, -1): 
+        print(binaryNum[j], end = ""); 
+n = 17; 
+decToBinary(n); 
