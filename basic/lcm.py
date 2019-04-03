@@ -15,4 +15,4 @@ def lcm(a,b):
 if __name__=="__main__":
     a =int(input())
     b =int(input())
-    print(lcm(b,a))
+    print(lcm(a,b))
